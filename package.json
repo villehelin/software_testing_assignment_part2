@@ -5,7 +5,8 @@
   "main": "",
   "type": "module",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "coverage": "c8 mocha"
   },
   "author": "",
   "license": "MIT",
