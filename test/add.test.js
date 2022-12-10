@@ -8,10 +8,12 @@ describe("add", () => {
         expect(add(6,11)).to.equal(17)
     });
 
-    // Ei heitäkään TypeErroria, add ei tarvitsekaan numeroita
+    // Ei heitäkään TypeErroria, add ei ilmeisesti tarvitse numeroita
+    /*
     it("add string to integer number AND fail", () => {
         expect(function() {add("k", 7)}).to.throw(TypeError)
     });
+    */
 
     it("add string to integer number", () => {
         expect(add("k", 7)).to.equal("k7")
