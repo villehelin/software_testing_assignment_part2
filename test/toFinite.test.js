@@ -10,4 +10,10 @@ describe("toFinite", () => {
     it("passing 0 in toFinite", () =>{
         expect(toFinite(1/0)).equal(Number.MAX_VALUE)
     });
+    it("passing string in toFinite", () =>{
+        expect(toFinite("tiivitaavi")).equal(+0)
+    });
+    it("passing array in toFinite", () =>{
+        expect(toFinite([2, 4 ,6])).to.deep.equal(+0)
+    });
    })
