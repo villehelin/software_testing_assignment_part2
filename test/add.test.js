@@ -32,9 +32,11 @@ describe("add", () => {
         expect(add(4, null)).to.equal(4)
     });
 
+    // Failed test
+    // Expected to return "k", returns "knull"
     /*
-    it("add int to null", () => {
-        expect(add(null, "k")).to.equal("k")
+    it("add string and null", () => {
+        expect(add("k", null)).to.eql("k")
     });
     */
 

@@ -4,13 +4,49 @@ import isEmpty from "../src/isEmpty.js";
 const expect = chai.expect
 
 describe("isEmpty", () => {
+
     it("passing empty array in isEmpty", () =>{
-        expect(isEmpty(null).istrue)
+        const testArray = []
+        expect(isEmpty(testArray).true)
     });
 
-    it("passing object to isEmpty", () =>{
-        expect(isEmpty({a: 1, b:1}).istrue)
+    it("passing non-empty array returns false", () =>{
+        const testArray = [1, 2, 3, 5, 8, 13]
+        expect(isEmpty(testArray).false)
     });
 
+    it("passing null object", () =>{
+        expect(isEmpty(null).true)
+    });
+
+    it("passing empty map", () =>{
+        const testMap = new Map();
+        expect(isEmpty(testMap).true)
+    });
+
+    it("passing non-empty map", () =>{
+        const testMap = new Map();
+        testMap.set('a',1)
+        expect(isEmpty(testMap).false)
+    });
+
+    it("passing object returns false", () =>{
+        expect(isEmpty({a: 1, b: 2}).false)
+    });
+
+    it("passing empty object", () =>{
+        expect(isEmpty({}).true)
+    });
+
+    it("passing object prototype returns false", () =>{
+        function Person(first, age) {
+            this.firstName = first;
+            this.age = age;
+        }
+        Person.prototype.occupation = "tester"
+        const testPerson = new Person("Barney", 42)
+
+        expect(isEmpty(testPerson.occupation).false)
+    });
 
    })
