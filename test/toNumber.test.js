@@ -54,7 +54,7 @@ describe("toNumber", () => {
     });
 
     it("Date to number returns false", () =>{
-        expect(toNumber(new Date()).false)
+        expect(toNumber(new Date('2022-12-14T22:10:00'))).false
     });
 
     it("object (function) to number", () =>{
