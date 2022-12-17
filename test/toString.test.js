@@ -4,9 +4,7 @@ import toString from "../src/toString.js";
 const expect = chai.expect
 
 describe("toString", () => {
-    it("passing string in toString", () =>{
-        expect(toString("test")).equal("test")
-    });
+
     it("passing object in toString", () =>{
         expect(toString({'a': 1, 'b': 1})).to.deep.equal('[object Object]')
     });
