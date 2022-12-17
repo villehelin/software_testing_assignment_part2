@@ -5,9 +5,6 @@ const expect = chai.expect
 
 describe("capitalize", () => {
 
-    it("all uppercase string", () =>{
-        expect(capitalize("FRED")).to.be.equal("Fred")
-    });
     it("passing int type number to capitalize", () =>{
         expect(capitalize(Number(123))).to.equal('123')
     });
